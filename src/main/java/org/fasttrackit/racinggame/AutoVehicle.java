@@ -9,4 +9,11 @@ public class AutoVehicle extends Vehicle {
         this.engine = engine;
     }
 
+    // constructor overloading
+    public AutoVehicle() {
+        this(new Engine());
+
+        // same effect as calling the other constructor as done above
+//        this.engine = new Engine();
+    }
 }

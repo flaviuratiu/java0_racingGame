@@ -73,5 +73,7 @@ public class App {
 //        System.out.println("Value from Car class: " + Car.totalVehicleCount);
 
         System.out.println("Total vehicle count: " + Vehicle.getTotalVehicleCount());
+
+
     }
 }

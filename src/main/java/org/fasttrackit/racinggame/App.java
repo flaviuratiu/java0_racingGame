@@ -5,7 +5,11 @@ import org.fasttrackit.racinggame.Car;
 public class App {
 
     public static void main(String[] args) {
-        Car car = new Car();
+        Engine engine = new Engine();
+        engine.manufacturer = "BavariaMotors";
+        engine.cubicCentimeters = 3000;
+
+        Car car = new Car(engine);
         car.name = "BMW";
         car.color = "gray";
         car.doorCount = 4;
@@ -22,11 +26,6 @@ public class App {
 
         System.out.println(car);
 
-        Engine engine = new Engine();
-        engine.manufacturer = "BavariaMotors";
-        engine.cubicCentimeters = 3000;
-
-        car.engine = engine;
 
         System.out.println("Engine details: " +
                 car.engine.manufacturer);
@@ -46,7 +45,7 @@ public class App {
 
         System.out.println("Car1: " + car.name);
 
-        Car car2 = new Car();
+        Car car2 = new Car(new Engine());
         car2.name = "Kia";
 
         System.out.println("Car2: " + car2.name);

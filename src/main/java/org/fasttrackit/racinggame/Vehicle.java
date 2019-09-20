@@ -106,4 +106,18 @@ public class Vehicle {
     public static int getTotalVehicleCount() {
         return totalVehicleCount;
     }
+
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "name='" + name + '\'' +
+                ", color='" + color + '\'' +
+                ", mileage=" + mileage +
+                ", maxSpeed=" + maxSpeed +
+                ", running=" + running +
+                ", fuelLevel=" + fuelLevel +
+                ", totalTraveledDistance=" + totalTraveledDistance +
+                '}';
+    }
+
 }

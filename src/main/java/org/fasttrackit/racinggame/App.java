@@ -15,6 +15,8 @@ public class App {
         car.setMileage(10.5);
         car.setRunning(true);
 
+        System.out.println(car.toString());
+
         double speed = 100;
 
 
@@ -74,6 +76,9 @@ public class App {
 
         System.out.println("Total vehicle count: " + Vehicle.getTotalVehicleCount());
 
+
+        Cheater cheater = new Cheater();
+        cheater.accelerate(60, 1);
 
     }
 }

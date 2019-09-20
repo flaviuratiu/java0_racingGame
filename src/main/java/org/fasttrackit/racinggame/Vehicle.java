@@ -2,6 +2,8 @@ package org.fasttrackit.racinggame;
 
 public class Vehicle {
 
+    private static int totalVehicleCount = 90;
+
     private String name;
     private String color;
     private double mileage;
@@ -9,6 +11,10 @@ public class Vehicle {
     private boolean running;
     private double fuelLevel;
     private double totalTraveledDistance;
+
+    public Vehicle() {
+        totalVehicleCount++;
+    }
 
     public double accelerate(double speed, double durationInHours) {
         System.out.println(name + " is accelerating with " +
@@ -90,5 +96,9 @@ public class Vehicle {
 
     public void setTotalTraveledDistance(double totalTraveledDistance) {
         this.totalTraveledDistance = totalTraveledDistance;
+    }
+
+    public static int getTotalVehicleCount() {
+        return totalVehicleCount;
     }
 }

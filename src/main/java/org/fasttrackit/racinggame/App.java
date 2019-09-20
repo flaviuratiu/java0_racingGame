@@ -1,7 +1,5 @@
 package org.fasttrackit.racinggame;
 
-import org.fasttrackit.racinggame.Car;
-
 public class App {
 
     public static void main(String[] args) {
@@ -21,7 +19,6 @@ public class App {
 
 
         double distance = car.accelerate(60, 1);
-
 
 
         System.out.println(car);
@@ -58,9 +55,23 @@ public class App {
         System.out.println(car2.isRunning());
 
 
-        car2 = car;
+//        car2 = car;
 
-        System.out.println("Car 2 changed: " + car2.getName());
+//        System.out.println("Car 2 changed: " + car2.getName());
 
+
+//        System.out.println("Static variables demo: ");
+//
+//        car.totalVehicleCount = 10;
+//
+//        System.out.println("Value from car: " + car.totalVehicleCount);
+//
+//        car2.totalVehicleCount = 20;
+//
+//        System.out.println("Value from car: " + car.totalVehicleCount);
+//        System.out.println("Value from car2: " + car2.totalVehicleCount);
+//        System.out.println("Value from Car class: " + Car.totalVehicleCount);
+
+        System.out.println("Total vehicle count: " + Vehicle.getTotalVehicleCount());
     }
 }

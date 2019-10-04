@@ -18,7 +18,7 @@ public class Vehicle {
 
     // method overloading
     public double accelerate(double speed) {
-         return accelerate(speed, 1);
+        return accelerate(speed, 1);
     }
 
     public double accelerate(double speed, double durationInHours) {
@@ -45,6 +45,11 @@ public class Vehicle {
         System.out.println("Total traveled distance: " + totalTraveledDistance);
 
         return traveledDistance;
+    }
+
+    // co-variant return type (Vehicle is sub-type of Object)
+    protected Vehicle clone() {
+        return new Vehicle();
     }
 
     public String getName() {

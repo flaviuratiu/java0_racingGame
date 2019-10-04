@@ -17,4 +17,15 @@ public class Cheater extends Vehicle {
 
         return traveledDistance;
     }
+
+    // co-variant return type
+    // access to overriding method can be extended (public here vs protected in super-class)
+    @Override
+    public Cheater clone() {
+        return new Cheater();
+    }
+
+    public void win() {
+        System.out.println("I'm gonna win");
+    }
 }

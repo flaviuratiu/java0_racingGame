@@ -1,5 +1,7 @@
 package org.fasttrackit.racinggame;
 
+import org.fasttrackit.racinggame.exception.MaxSpeedExceededException;
+
 public class Vehicle {
 
     private static int totalVehicleCount = 90;
@@ -17,11 +19,20 @@ public class Vehicle {
     }
 
     // method overloading
-    public double accelerate(double speed) {
+    public double accelerate(double speed) throws MaxSpeedExceededException {
         return accelerate(speed, 1);
     }
 
-    public double accelerate(double speed, double durationInHours) {
+    public double accelerate(double speed, double durationInHours) throws MaxSpeedExceededException {
+        if (fuelLevel <= 0) {
+            System.out.println("No enough fuel.");
+            return 0;
+        }
+
+        if (speed > maxSpeed) {
+            throw new MaxSpeedExceededException();
+        }
+
         System.out.println(name + " is accelerating with " +
                 speed + " for " + durationInHours + " h.");
 
